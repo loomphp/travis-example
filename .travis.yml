@@ -18,7 +18,7 @@ install:
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
-  - vendor/bin/phpunit --colors=always
+  - vendor/bin/phpunit --colors=always --coverage-clover clover.xml
 
 notifications:
     email: false
