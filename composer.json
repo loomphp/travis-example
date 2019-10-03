@@ -40,6 +40,10 @@
         }
     },
     "scripts": {
+        "check": [
+            "@check-style",
+            "@test"
+        ],
         "check-style": "phpcs src test",
         "fix-style": "phpcbf src test",
         "test": "phpunit --colors=always",

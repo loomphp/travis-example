@@ -1,7 +1,9 @@
 .idea
+.phpunit.result.cache
 build
 composer.lock
 composer.phar
 vendor
-phpcs.xml
+clover.xml
+coveralls-upload.json
 phpunit.xml
