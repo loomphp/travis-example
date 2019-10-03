@@ -10,11 +10,17 @@ cache:
   directories:
     - $HOME/.composer/cache
 
+env:
+    global:
+        - COMPOSER_ARGS="--no-interaction"
+        - COVERAGE_DEPS="php-coveralls/php-coveralls"
+
 before_install:
   - travis_retry composer self-update
 
 install:
-  - travis_retry composer install --no-interaction --prefer-dist
+  - travis_retry composer install --prefer-dist $COMPOSER_ARGS
+  - travis_retry composer require --dev $COMPOSER_ARGS $COVERAGE_DEPS
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
