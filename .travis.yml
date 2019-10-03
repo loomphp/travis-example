@@ -1,0 +1,24 @@
+language: php
+
+php:
+  - 7.2
+
+matrix:
+  fast_finish: true
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - travis_retry composer self-update
+
+install:
+  - travis_retry composer install --no-interaction --prefer-dist
+
+script:
+  - vendor/bin/phpcs --standard=psr2 src/
+  - vendor/bin/phpunit --colors=always --coverage-clover clover.xml
+
+notifications:
+    email: false
