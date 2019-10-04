@@ -3,6 +3,10 @@
     "type": "library",
     "description": "A repository to try Travis CI features",
     "keywords": [
+        "php",
+        "phpunit",
+        "travis",
+        "coveralls",
         "loom",
         "travis-example"
     ],
