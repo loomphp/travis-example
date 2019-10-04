@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Loom\Template;
+namespace LoomTest\Template;
 
 use InvalidArgumentException;
 use Loom\Travis\Email;
